@@ -1,0 +1,20 @@
+1. init, add and commit each repository
+
+2. merge two repository
+  a. create a new folder
+  b. cd into the new folder and "git init"
+  # Make a dummy commit
+  c. dir > deleteme.txt 
+  d. git commit -m "Initial dummy commit" (make a dummy commit)  
+  # Add a remote repository               
+  e. git remote add -f sourceName <git_url>
+  # Merge files from sourceName/master into new/master
+  f. git merge sourceName/master --allow-unrelated-histories -m "merge"
+  # Clean up the dummy data
+  g. git rm deleteme.txt
+  h. git commit -m "Clean up initial file"
+  # Make the sourceName repo file and folers into a subdirectory
+  i. mkdir sourceName
+  j. git mv [fileName_or_folder] sourceName/
+  # commit the move
+  k. git commit -m "Move everything into sourceName"
